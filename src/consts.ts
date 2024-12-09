@@ -31,11 +31,6 @@ export const TEAM: Page = {
   DESCRIPTION: "See our team.",
 }
 
-// Other Page
-export const OTHERPROJECTS: Page = {
-  TITLE: "Other Stuff",
-  DESCRIPTION: "Random unfinished events.",
-}
 
 // Search Page
 export const SEARCH: Page = {
@@ -43,10 +38,10 @@ export const SEARCH: Page = {
   DESCRIPTION: "Search all posts and events by keyword.",
 }
 
-// NNB Workshop
-export const NNB_WORKSHOP: Page = {
-  TITLE: "NNB Workshop",
-  DESCRIPTION: "Explore modded content.",
+// Products Page 
+export const PRODUCTS: Page = {
+  TITLE: "Produkty",
+  DESCRIPTION: "Recent events I have worked on.",
 }
 
 // Links
@@ -57,7 +52,7 @@ export const LINKS: Links = [
   },
   {
     TEXT: "Produkty",
-    HREF: "/produkty",
+    HREF: "/products",
   },
   {
     TEXT: "Lokalizacja",

@@ -36,6 +36,22 @@ const events = defineCollection({
   }),
 })
 
+
+const products = defineCollection({
+  loader: glob({ pattern: '**\/[^_]*.md', base: "./src/content/products" }),
+  schema: z.object({
+    title: z.string(),
+    summary: z.string(),
+    date: z.coerce.date(),
+    tags: z.array(z.string()),
+    draft: z.boolean().optional(),
+    demoUrl: z.string().optional(),
+    repoUrl: z.string().optional(),
+    imageUrl: z.string().optional(),
+  }),
+})
+
+
 const otherprojects = defineCollection({
   loader: glob({ pattern: '**\/[^_]*.md', base: "./src/content/otherprojects" }),
   schema: z.object({
@@ -93,4 +109,4 @@ const legal = defineCollection({
   }),
 })
 
-export const collections = { work, blog, events, legal, team, otherprojects, nnb_workshop}
+export const collections = { work, blog, events, legal, team, otherprojects, nnb_workshop, products}

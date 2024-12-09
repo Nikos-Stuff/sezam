@@ -1,21 +1,21 @@
 import type { CollectionEntry } from "astro:content";
 import { createEffect, createSignal, For } from "solid-js";
-import ArrowCard from "@components/nnb/WorkshopCard";
+import ArrowCard from "@components/ArrowCard";
 import { cn } from "@lib/utils";
 
 type Props = {
   tags: string[];
-  data: CollectionEntry<"nnb_workshop">[];
+  data: CollectionEntry<"products">[];
 };
 
-export default function Blog({ data, tags }: Props) {
+export default function Products({ data, tags }: Props) {
   const [filter, setFilter] = createSignal(new Set<string>());
-  const [workshop, setWorkshop] = createSignal<
-    CollectionEntry<"nnb_workshop">[]
-  >([]);
+  const [products, setProducts] = createSignal<CollectionEntry<"products">[]>(
+    []
+  );
 
   createEffect(() => {
-    setWorkshop(
+    setProducts(
       data.filter((entry) =>
         Array.from(filter()).every((value) =>
           entry.data.tags.some(
@@ -37,6 +37,7 @@ export default function Blog({ data, tags }: Props) {
 
   return (
     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      {/* Filter Section */}
       <div class="col-span-3 sm:col-span-1">
         <div class="sticky top-24">
           <div class="text-sm font-semibold uppercase mb-2 text-black dark:text-white">
@@ -82,18 +83,18 @@ export default function Blog({ data, tags }: Props) {
           </ul>
         </div>
       </div>
+
+      {/* Product Grid */}
       <div class="col-span-3 sm:col-span-2">
         <div class="flex flex-col">
-          <div class="text-sm uppercase mb-2">
-            SHOWING {workshop().length} OF {data.length} ADD-ONS
+          <div class="text-sm uppercase mb-2 text-center sm:text-left">
+            POKAZYWANIE {products().length} Z {data.length} PRODUKTÓW
           </div>
-          <ul class="flex flex-col gap-3">
-            {workshop().map((entryp) => (
-              <li>
-                <ArrowCard entry={entryp} />
-              </li>
+          <div class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 place-items-center">
+            {products().map((product) => (
+              <ArrowCard entry={product} />
             ))}
-          </ul>
+          </div>
         </div>
       </div>
     </div>

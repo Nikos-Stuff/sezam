@@ -5,6 +5,7 @@ type Props = {
   entry:
     | CollectionEntry<"blog">
     | CollectionEntry<"events">
+    | CollectionEntry<"products">
   pill?: boolean;
 };
 
@@ -15,6 +16,8 @@ export default function ArrowCard({ entry, pill }: Props) {
         return `/blog/${entry.id}`;
       case "events":
         return `/events/${entry.id}`;
+      case "products":
+          return `/products/${entry.id}`;
       default:
         return "/";
     }
@@ -92,6 +95,30 @@ export default function ArrowCard({ entry, pill }: Props) {
             />
           </svg>
         </a>
+      ) : entry.collection === "products" ? (
+        // Products cart design
+        <a
+        href={getEntryLink()}
+        class="group  p-2 flex flex-col items-center border border-dashed rounded-lg hover:scale-105 hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-all duration-300 ease-in-out relative"
+      >
+        {entry.data.imageUrl && (
+          <div class="w-full h-full rounded-lg overflow-hidden flex justify-center items-center group-hover:scale-[0.90] transition-all duration-500 ease-in-out">
+            <img
+              src={entry.data.imageUrl}
+              alt={entry.data.title}
+              class="w-full h-full object-cover rounded-lg filter  transition-transform duration-300 ease-in-out"
+              decoding="async"
+              loading="eager"
+            />
+          </div>
+        )}
+    
+        <div class="w-full mt-2 z-10 text-center group-hover:text-black group-hover:dark:text-white">
+          <div class="text-sm font-semibold text-gray-200 dark:text-white line-clamp-2">
+            {entry.data.title}
+          </div>
+        </div>
+      </a>
       ) : (
         // Normal Card Design
         <a
