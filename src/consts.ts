@@ -56,11 +56,11 @@ export const LINKS: Links = [
   },
   {
     TEXT: "Lokalizacja",
-    HREF: "/lokalizacja",
+    HREF: "/localization",
   },
   {
     TEXT: "O Nas",
-    HREF: "/onas",
+    HREF: "/about",
   },
   {
     TEXT: "Narzędzia",
