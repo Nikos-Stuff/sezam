@@ -11,8 +11,8 @@ import { SITE } from "@consts"
 <!doctype html>
 <html lang="en"  class="no-scrollbar">
   <head>
-    <script>document.documentElement.classList.add('js')</script>
     <BaseHead title={`${title} | ${SITE.TITLE}`} description={description} />
+    <script is:inline>document.documentElement.classList.add('js')</script>
   </head>
   <body>
     <Header />
@@ -21,6 +21,6 @@ import { SITE } from "@consts"
       <slot />
     </main>
     <Footer />
-    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"></script>
+    <script src="https://unpkg.com/taos@1.0.5/dist/taos.js"/>
   </body>
 </html>

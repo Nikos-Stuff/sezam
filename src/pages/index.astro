@@ -4,9 +4,7 @@
 import {getCollection} from "astro:content"
 import PageLayout from "@layouts/PageLayout.astro"
 import ArrowCard from "@components/ArrowCard"
-import {SITE, SOCIALS} from "@consts"
-
-import Reviews from "@components/Reviews.astro"
+import {SITE} from "@consts"
 
 const posts = (await getCollection("blog"))
     .filter(post => !post.data.draft)
@@ -22,11 +20,10 @@ const events = (await getCollection("events"))
 
 import TitleHeader from "../components/TitleHeader.astro";
 import Pricing_carousel from "../components/pricing_carousel.astro";
-import Footer from "@components/Footer.astro"
 
 ---
 <PageLayout title="Home" description={SITE.DESCRIPTION}>
-            <div class="snap-y snap-mandatory h-screen w-screen mx:auto overflow-scroll no-scrollbar">
+            <!--<div class="snap-y h-screen w-screen mx:auto overflow-scroll no-scrollbar">-->
                 <div class="snap-center grid w-screen h-screen place-items-center relative text-center overflow-hidden">
                     <img
                             id="bg_img"
@@ -61,9 +58,9 @@ import Footer from "@components/Footer.astro"
                     <div class="relative z-10">
                         <div class="mx-auto w-screen max-w-screen-lg p-5 space-y-24 pb-16">
                             <!-- Two-Column Layout for Blog and Projects -->
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-20">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-20 delay-[300ms] duration-[600ms] taos:scale-[0.6] taos:opacity-0" data-taos-offset="400">
                                 <!-- Blog Preview Section -->
-                                <section class="animate space-y-4">
+                                <section class="space-y-4">
                                     <div>
                                         <p class="font-semibold text-black dark:text-white text-lg">Co nowego?</p>
                                         <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2">
@@ -98,6 +95,5 @@ import Footer from "@components/Footer.astro"
                             </div>
                         </div>
                     </div>
-                </div>                
-            </div>
+                </div>
 </PageLayout>
