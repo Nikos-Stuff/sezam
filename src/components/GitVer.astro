@@ -24,7 +24,7 @@ const getCommitHash = async (): Promise<string> => {
 
 const commitHash = await getCommitHash();
 const shortCommitHash = commitHash === '-' ? '-' : commitHash.slice(0, 7); // Shorten the commit hash or return '-'
-const commitUrl = commitHash === '-' ? '#' : `https://github.com/Nikos-Stuff/web/commit/${commitHash}`;
+const commitUrl = commitHash === '-' ? '#' : `https://github.com/Nikos-Stuff/sezam/commit/${commitHash}`;
 ---
 
 <a href={commitUrl} target="_blank" rel="noopener noreferrer">
