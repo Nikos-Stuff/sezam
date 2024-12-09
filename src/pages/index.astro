@@ -1,0 +1,103 @@
+---
+// export const prerender = false;
+
+import {getCollection} from "astro:content"
+import PageLayout from "@layouts/PageLayout.astro"
+import ArrowCard from "@components/ArrowCard"
+import {SITE, SOCIALS} from "@consts"
+
+import Reviews from "@components/Reviews.astro"
+
+const posts = (await getCollection("blog"))
+    .filter(post => !post.data.draft)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 3)
+
+const events = (await getCollection("events"))
+    .filter(event => !event.data.draft)
+    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
+    .slice(0, 3)
+
+
+
+import TitleHeader from "../components/TitleHeader.astro";
+import Pricing_carousel from "../components/pricing_carousel.astro";
+import Footer from "@components/Footer.astro"
+
+---
+<PageLayout title="Home" description={SITE.DESCRIPTION}>
+            <div class="snap-y snap-mandatory h-screen w-screen mx:auto overflow-scroll no-scrollbar">
+                <div class="snap-center grid w-screen h-screen place-items-center relative text-center overflow-hidden">
+                    <img
+                            id="bg_img"
+                            src="/imgs/bg.webp"
+                            alt="Background"
+                            class="absolute w-full h-full object-cover blur-xl brightness-[0.3] saturate-[0.4] transition-opacity duration-500 opacity-0 scale-[1.5]"
+                            onload="this.classList.add('opacity-100'); this.classList.remove('opacity-0');"
+                            decoding="async"
+                            loading="eager"
+                            draggable="false"
+                    />
+                    <div class="z-10 flex flex-col items-center space-y-4">
+                        <TitleHeader />
+                        <section class="animate animate-bounce">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed">
+                                <path d="m480-259 176-177q5-5 12.5-5.5T682-436q6 6 6 12.5t-6 12.5L504-233q-5 5-10.5 7.5T480-223q-8 0-13.5-2.5T457-233L279-411q-6-5-6-12t6-13q6-6 12.5-6t13.5 6l175 177Zm0-278 176-178q5-5 12.5-4.5T682-715q6 7 6 13.5t-6 12.5L504-511q-5 4-10.5 7.5T480-500q-8 0-13.5-3.5T457-511L279-689q-6-5-6-12.5t6-13.5q6-6 12.5-6t13.5 6l175 178Z"/>
+                            </svg>
+                        </section>
+                    </div>
+                </div>
+
+
+                <div class="snap-center grid w-screen h-screen place-items-center">
+                    <!--<div class="relative">-->
+                    <!--    <div class="mx-auto max-w-screen-sm p-5 space-y-24 pb-16 overflow-hidden">-->
+                            <Pricing_carousel/>
+                            <script defer is:inline src="/js/carousel.js"/>
+                    <!--    </div>-->
+                    <!--</div>-->
+                </div>
+                <div class="snap-center grid w-screen h-auto place-items-center relative">
+                    <div class="relative z-10">
+                        <div class="mx-auto w-screen max-w-screen-lg p-5 space-y-24 pb-16">
+                            <!-- Two-Column Layout for Blog and Projects -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-20">
+                                <!-- Blog Preview Section -->
+                                <section class="animate space-y-4">
+                                    <div>
+                                        <p class="font-semibold text-black dark:text-white text-lg">Co nowego?</p>
+                                        <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2">
+                                            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white">Wszystkie Posty</span>
+                                        </a>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        {posts.map((post) => (
+                                                <li id={post.id}>
+                                                    <ArrowCard entry={post}/>
+                                                </li>
+                                        ))}
+                                    </ul>
+                                </section>
+                
+                                <!-- Project Preview Section -->
+                                <section class="animate space-y-4">
+                                    <div>
+                                        <p class="font-semibold text-black dark:text-white text-lg">Wydarzenia</p>
+                                        <a href="/events" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2">
+                                            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white">Zobacz Wszystkie</span>
+                                        </a>
+                                    </div>
+                                    <ul class="space-y-4">
+                                        {events.map((event) => (
+                                                <li id={event.id}>
+                                                    <ArrowCard entry={event}/>
+                                                </li>
+                                        ))}
+                                    </ul>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+            </div>
+</PageLayout>
