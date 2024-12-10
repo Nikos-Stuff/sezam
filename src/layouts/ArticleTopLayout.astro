@@ -3,7 +3,7 @@ import type { CollectionEntry } from "astro:content"
 import { formatDate, readingTime } from "@lib/utils"
 
 type Props = {
-  entry: CollectionEntry<"events"> | CollectionEntry<"blog"> | CollectionEntry<"products">
+  entry: CollectionEntry<"events"> | CollectionEntry<"blog"> | CollectionEntry<"products">  | CollectionEntry<"canalplus">
 }
 
 const { entry } = Astro.props
@@ -13,7 +13,7 @@ const { title, summary, date } = data
 const demoUrl = collection === "events" ? data.demoUrl : null
 const repoUrl = collection === "events" ? data.repoUrl : null
 
-const imageUrl = (collection === "events" || collection === "products") ? data.imageUrl : null;
+const imageUrl = (collection === "events" || collection === "products" || collection === "canalplus") ? data.imageUrl : null;
 
 ---
 
@@ -24,7 +24,7 @@ const imageUrl = (collection === "events" || collection === "products") ? data.i
       <polyline points="12 19 5 12 12 5" class="translate-x-1 group-hover:translate-x-0 transition-all duration-300 ease-in-out" />
     </svg>
     <div class="w-full group-hover:text-black group-hover:dark:text-white transition-colors duration-300 ease-in-out">
-      Back to {collection}
+      Wróć
     </div>
   </a>
   <div class="flex flex-wrap text-sm uppercase mt-12 gap-3 opacity-75">
@@ -55,7 +55,7 @@ const imageUrl = (collection === "events" || collection === "products") ? data.i
                 <use href="/ui.svg#globe" class="fill-current group-hover:fill-black group-hover:dark:fill-white blend"/>
               </svg>
               <span class="text-current group-hover:text-black group-hover:dark:text-white blend">
-          See Page
+          Zobacz Stronę
         </span>
             </a>
         }
@@ -65,7 +65,7 @@ const imageUrl = (collection === "events" || collection === "products") ? data.i
                 <use href="/ui.svg#link" class="fill-current group-hover:fill-black group-hover:dark:fill-white blend"/>
               </svg>
               <span class="text-current group-hover:text-black group-hover:dark:text-white blend">
-          See Repository
+          Zobacz Repozytorium
         </span>
             </a>
         }

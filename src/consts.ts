@@ -25,6 +25,12 @@ export const EVENTS: Page = {
   DESCRIPTION: "Recent events I have worked on.",
 }
 
+// CANALPLUS Page 
+export const CANALPLUS: Page = {
+  TITLE: "Wpisy Canal+",
+  DESCRIPTION: "Recent events I have worked on.",
+}
+
 // Team Page
 export const TEAM: Page = {
   TITLE: "Team",
