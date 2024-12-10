@@ -64,7 +64,7 @@ export const LINKS: Links = [
   },
   {
     TEXT: "Narzędzia",
-    HREF: "/narzedzia",
+    HREF: "/tools",
   },
 ]
 
