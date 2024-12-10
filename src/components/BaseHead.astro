@@ -31,6 +31,13 @@ const { title, description, image = "/open-graph.jpg" } = Astro.props
 <meta name="title" content={title} />
 <meta name="description" content={description} />
 
+<!-- Chrome, Firefox OS and Opera -->
+<meta name="theme-color" content="#00f2ff">
+<!-- Windows Phone -->
+<meta name="msapplication-navbutton-color" content="#00f2ff">
+<!-- iOS Safari -->
+<meta name="apple-mobile-web-app-status-bar-style" content="#00f2ff">
+
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
 <meta property="og:url" content={Astro.url} />
