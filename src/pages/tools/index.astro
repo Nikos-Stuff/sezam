@@ -1,22 +1,8 @@
 ---
 // export const prerender = false;
 
-import {getCollection} from "astro:content"
 import PageLayout from "@layouts/PageLayout.astro"
-import ArrowCard from "@components/ArrowCard"
 import {SITE} from "@consts"
-
-const posts = (await getCollection("blog"))
-    .filter(post => !post.data.draft)
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-    .slice(0, 3)
-
-const events = (await getCollection("events"))
-    .filter(event => !event.data.draft)
-    .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-    .slice(0, 3)
-
-
 
 import TitleHeader from "@components/TitleHeader.astro";
 
