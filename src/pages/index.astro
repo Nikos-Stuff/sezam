@@ -69,7 +69,7 @@ import Pricing_carousel from "../components/pricing_carousel.astro";
                                     <div>
                                         <p class="font-semibold text-black dark:text-white text-lg">Co nowego?</p>
                                         <a href="/blog" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2">
-                                            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white">Wszystkie Posty</span>
+                                            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white transition-all">Wszystkie Posty</span>
                                         </a>
                                     </div>
                                     <ul class="space-y-4">
@@ -86,7 +86,7 @@ import Pricing_carousel from "../components/pricing_carousel.astro";
                                     <div>
                                         <p class="font-semibold text-black dark:text-white text-lg">Wydarzenia</p>
                                         <a href="/events" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2">
-                                            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white">Zobacz Wszystkie</span>
+                                            <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white transition-all">Zobacz Wszystkie</span>
                                         </a>
                                     </div>
                                     <ul class="space-y-4">
@@ -139,7 +139,9 @@ import Pricing_carousel from "../components/pricing_carousel.astro";
                 </div>
 
                 <div class="snap-center grid w-screen h-auto place-items-center relative overflow-clip text-gray-300
-                           bg-black delay-[300ms] duration-[600ms] taos:bg-transparent [animation-iteration-count:infinite]" data-taos-offset="400">
+                           bg-black delay-[300ms] duration-[600ms] taos:bg-transparent taos:scale-[1.2] taos:opacity-0 [animation-iteration-count:infinite] bg-center bg-no-repeat bg-cover"
+                           data-taos-offset="400" style="background-image: url(imgs/canal_plus.webp)">
+                           <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-md"></div>
                     <div class="relative z-10">
                         <div class="mx-auto w-screen max-w-screen-lg p-5 space-y-24 pb-16">
 
@@ -168,7 +170,7 @@ import Pricing_carousel from "../components/pricing_carousel.astro";
                         <section class="space-y-4 delay-[300ms] duration-[600ms] taos:translate-x-[100%] [animation-iteration-count:infinite] taos:opacity-0" data-taos-offset="400">
                             <div>
                                 <a href="/canalplus" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2">
-                                    <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white">Zobacz Wszystkie</span>
+                                    <span class="text-gray-300 hover:text-white transition-all">Zobacz Wszystkie</span>
                                 </a>
                             </div>
                             <ul class="space-y-4">
