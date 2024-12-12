@@ -1,0 +1,41 @@
+<div class="mr-auto ml-auto p-6 bg-transparent rounded-lg hover:bg-black/5 border hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-all">
+    <form method="post" action="" enctype="multipart/form-data" class="space-y-6">
+
+        <!-- Simple Form -->
+        <div id="root_form">
+            <label for="user_input1" class="block text-sm font-semibold ">Tytuł (np HP):</label>
+            <input type="text" id="user_input1" name="user_input[]" class="mt-2 p-2 w-full border border-black/15 dark:border-white/20 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500">
+            <p class="text-sm text-gray-500 mt-2"><em>Wpisując popularną nazwe marki np Samsung wybierzemy automatycznie logo.</em></p>
+
+            <label for="user_input2" class="block text-sm font-semibold">Podtytuł (np MODEL ABC123):</label>
+            <input type="text" id="user_input2" name="user_input[]" class="mt-2 p-2 w-full border border-black/15 dark:border-white/20 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Wyróżnienie Section -->
+        <div id="slots_1">
+            <label for="user_input3" class="block text-sm font-semibold">Wyróżnienie 1:</label>
+            <input type="text" id="user_input3" name="user_input[]" class="mt-2 p-2 w-full border border-black/15 dark:border-white/20 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500">
+            <label for="user_input4" class="block text-sm font-semibold">Opis 1:</label>
+            <textarea id="user_input4" name="user_input[]" rows="2" class="mt-2 p-2 w-full border border-black/15 dark:border-white/20 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+
+
+        <div id="extra_input">
+            <label for="user_input9" class="block text-sm font-semibold">Reszta Opisu:</label>
+            <textarea id="user_input9" name="user_input[]" rows="9" class="mt-2 p-2 w-full border border-black/15 dark:border-white/20 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+
+        <!-- Price Input Section -->
+        <div>
+            <label for="price" class="block text-sm font-semibold">Cena:</label>
+            <input type="text" id="price" name="price" class="mt-2 p-2 w-full border border-black/15 dark:border-white/20 rounded-lg bg-transparent focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <!-- Submit Button -->
+        <div class="group mt-10 p-3 gap-3 flex items-center border rounded-lg hover:scale-105 hover:bg-black/5 hover:dark:bg-white/10 border-black/15 dark:border-white/20 transition-all duration-300 ease-in-out">
+            <input type="submit" name="submit" value="Wygeneruj" class="w-full z-10 relative group-hover:text-black group-hover:dark:text-white text-center">
+        </div>
+    </form>
+</div>
