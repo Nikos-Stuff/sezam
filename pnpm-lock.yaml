@@ -12,14 +12,14 @@ importers:
         specifier: ^0.9.4
         version: 0.9.4(typescript@5.7.2)
       '@astrojs/mdx':
-        specifier: 4.0.3
-        version: 4.0.3(astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
+        specifier: 4.0.5
+        version: 4.0.5(astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       '@astrojs/node':
         specifier: ^9.0.0
-        version: 9.0.0(astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
+        version: 9.0.0(astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))
       '@astrojs/rss':
-        specifier: ^4.0.10
-        version: 4.0.10
+        specifier: ^4.0.11
+        version: 4.0.11
       '@astrojs/sitemap':
         specifier: ^3.2.1
         version: 3.2.1
@@ -28,7 +28,7 @@ importers:
         version: 5.0.1(@types/node@20.14.12)(jiti@2.4.2)(solid-js@1.9.3)(yaml@2.6.1)
       '@astrojs/tailwind':
         specifier: ^5.1.4
-        version: 5.1.4(astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)
+        version: 5.1.4(astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)
       '@playform/inline':
         specifier: ^0.1.0
         version: 0.1.0(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
@@ -42,8 +42,8 @@ importers:
         specifier: ^2.3.4
         version: 2.3.4
       astro:
-        specifier: 5.1.1
-        version: 5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+        specifier: 5.1.5
+        version: 5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
@@ -116,8 +116,8 @@ packages:
   '@astrojs/markdown-remark@6.0.1':
     resolution: {integrity: sha512-CTSYijj25NfxgZi15TU3CwPwgyD1/7yA3FcdcNmB9p94nydupiUbrIiq3IqeTp2m5kCVzxbPZeC7fTwEOaNyGw==}
 
-  '@astrojs/mdx@4.0.3':
-    resolution: {integrity: sha512-8HcuyNG/KgYUAQWVzKFkboXcTOBCW6aQ0WK0Er/iSmVSF0y3yimg4/3QSt+Twv9dogpwIHL+E8iBJKqieFv4+g==}
+  '@astrojs/mdx@4.0.5':
+    resolution: {integrity: sha512-JhMCm4wf94PNHQDWKyez2ZVLcG5R6Cyjk8TmpqYVRrOTuU3GIWeDAoum7Q1p05SFD+nYwvXOcv42/m8pE3Ylug==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
     peerDependencies:
       astro: ^5.0.0
@@ -131,8 +131,8 @@ packages:
     resolution: {integrity: sha512-GilTHKGCW6HMq7y3BUv9Ac7GMe/MO9gi9GW62GzKtth0SwukCu/qp2wLiGpEujhY+VVhaG9v7kv/5vFzvf4NYw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0}
 
-  '@astrojs/rss@4.0.10':
-    resolution: {integrity: sha512-2gFdHM763uUAySkdwPYrpi6dppOBJr9ddg5VbkKXctWze8d1JHgIBBY78zWIYs7KBJT58zxadsObVAVt55RDaw==}
+  '@astrojs/rss@4.0.11':
+    resolution: {integrity: sha512-3e3H8i6kc97KGnn9iaZBJpIkdoQi8MmR5zH5R+dWsfCM44lLTszOqy1OBfGGxDt56mpQkYVtZJWoxMyWuUZBfw==}
 
   '@astrojs/sitemap@3.2.1':
     resolution: {integrity: sha512-uxMfO8f7pALq0ADL6Lk68UV6dNYjJ2xGUzyjjVj60JLBs5a6smtlkBYv3tQ0DzoqwS7c9n4FUx5lgv0yPo/fgA==}
@@ -1061,8 +1061,8 @@ packages:
     resolution: {integrity: sha512-LElXdjswlqjWrPpJFg1Fx4wpkOCxj1TDHlSV4PlaRxHGWko024xICaa97ZkMfs6DRKlCguiAI+rbXv5GWwXIkg==}
     hasBin: true
 
-  astro@5.1.1:
-    resolution: {integrity: sha512-prpWC2PRs4P3FKQg6gZaU+VNMqbZi5pDvORGB2nrjfRjkrvF6/l4BqhvkJ6YQ0Ohm5rIMVz8ljgaRI77mLHbwg==}
+  astro@5.1.5:
+    resolution: {integrity: sha512-Q9TE4aNlczxVoPDoXR3UcjLezL+70z0KbTRXovE4ybpx0mgNL1jsmSWtF3UFXB5+GTf9JK7om5fbIaaMReKcUg==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=22.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -3108,12 +3108,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@4.0.3(astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
+  '@astrojs/mdx@4.0.5(astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
       '@astrojs/markdown-remark': 6.0.1
       '@mdx-js/mdx': 3.1.0(acorn@8.14.0)
       acorn: 8.14.0
-      astro: 5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
       es-module-lexer: 1.5.4
       estree-util-visit: 2.0.0
       hast-util-to-html: 9.0.3
@@ -3127,9 +3127,9 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/node@9.0.0(astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
+  '@astrojs/node@9.0.0(astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))':
     dependencies:
-      astro: 5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
       send: 1.1.0
       server-destroy: 1.0.1
     transitivePeerDependencies:
@@ -3139,7 +3139,7 @@ snapshots:
     dependencies:
       prismjs: 1.29.0
 
-  '@astrojs/rss@4.0.10':
+  '@astrojs/rss@4.0.11':
     dependencies:
       fast-xml-parser: 4.5.0
       kleur: 4.1.5
@@ -3170,9 +3170,9 @@ snapshots:
       - tsx
       - yaml
 
-  '@astrojs/tailwind@5.1.4(astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)':
+  '@astrojs/tailwind@5.1.4(astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1))(tailwindcss@3.4.16)':
     dependencies:
-      astro: 5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
       autoprefixer: 10.4.20(postcss@8.4.49)
       postcss: 8.4.49
       postcss-load-config: 4.0.2(postcss@8.4.49)
@@ -3690,7 +3690,7 @@ snapshots:
   '@playform/inline@0.1.0(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)':
     dependencies:
       '@playform/pipe': 0.1.0
-      astro: 5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
+      astro: 5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1)
       critters: 0.0.24
     transitivePeerDependencies:
       - '@azure/app-configuration'
@@ -4007,7 +4007,7 @@ snapshots:
 
   astring@1.9.0: {}
 
-  astro@5.1.1(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1):
+  astro@5.1.5(@types/node@20.14.12)(jiti@2.4.2)(rollup@4.28.1)(typescript@5.7.2)(yaml@2.6.1):
     dependencies:
       '@astrojs/compiler': 2.10.3
       '@astrojs/internal-helpers': 0.4.2
