@@ -3,6 +3,8 @@
 
 /*  */
 @plugin "@tailwindcss/typography";
+@plugin "taos/plugin";
+
 
 
 @custom-variant dark (&:where(.dark, .dark *));
